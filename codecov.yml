@@ -1,0 +1,43 @@
+ignore:
+  - config/*
+  - ironfish-rust-nodejs/*
+  - ironfish-rust-wasm/*
+comment: false
+github_checks:
+  annotations: false
+coverage:
+  fixes:
+    - "/home/runner/work/ironfish/ironfish/::/"
+  status:
+    patch:
+      default:
+        target: 10%
+        threshold: 0%
+    project:
+      default:
+        target: 10%
+      ironfish-rust:
+        target: 10%
+        flags:
+          - ironfish-rust
+      ironfish-cli:
+        target: 10%
+        flags:
+          - ironfish-cli
+      ironfish:
+        target: 10%
+        flags:
+          - ironfish
+flags:
+  ironfish-rust:
+    paths:
+      - ironfish-rust
+    carryforward: true
+  ironfish-cli:
+    paths:
+      - ironfish-cli
+    carryforward: true
+  ironfish:
+    paths:
+      - ironfish
+    carryforward: true

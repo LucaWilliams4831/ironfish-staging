@@ -1,0 +1,43 @@
+name: Bug Report
+description: File a bug report
+title: "[issue name]"
+labels: ["bug", "triage"]
+assignees:
+  - iron-fish/engineering
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      placeholder: ex. v0.0.0
+  - type: textarea
+    id: debug
+    attributes:
+      label: Debug output
+      description: Please copy and paste the output of `ironfish debug` / `yarn start debug` (same as you run any other `ironfish` commands).  This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: input
+    id: graffiti
+    attributes:
+      label: Graffiti
+      description: Please copy and paste your graffiti.
